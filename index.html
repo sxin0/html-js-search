@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/jquery.bigautocomplete.css" type="text/css"/>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            font-size: 12px;
+        }
+    </style>
+
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bigautocomplete.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $("#tt").bigAutocomplete({
+                width: 300,
+                data: [
+                    {
+                        name: "中国好声音",
+                        result: {ff: "qq"}
+                    },
+                    {name: "中国移动网上营业厅"},
+                    {name: "中国银行"},
+                    {name: "中国移动"},
+                    {name: "中国好声音第三期"},
+                    {name: "中国好声音 第一期"},
+                    {name: "中国电信网上营业厅"},
+                    {name: "中国工商银行"},
+                    {name: "中国好声音第二期"},
+                    {name: "中国地图"}],
+                callback: function (data) {
+                    alert(data.name);
+                }
+            });
+        })
+    </script>
+
+</head>
+<body>
+<br/><br/><br/>
+<center>
+    自定义下拉框宽度，列表为：中国好声音、中国移动网上营业厅、中国银行、中国移动、中国好声音第三期、中国好声音 第一期、中国电信网上营业厅、中国工商银行、中国好声音第二期、中国地图
+    <br/>
+    <br/>
+    <br/>
+    <input type="text" id="tt"
+           style="width:600px;height:30px; line-height:30px;font-size:15px; border:2px #CCCCCC solid;"
+           autocomplete="off"/>
+    <br/>
+
+    <!--<input list="companys" name="companies_code" placeholder="请选择" autocomplete="off"/>
+    <datalist id="companys">
+        <option value="aaa">aaa</option>
+        <option value="bbb">bbb</option>
+        <option value="ccc">ccc</option>
+    </datalist>-->
+
+</center>
+</body>
+</html>
